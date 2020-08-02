@@ -28,9 +28,8 @@ export default function ajax(params, callback) {
         if (this.readyState === 4 && this.status === 200) {
             if (typeof callback === 'function') {
                 callback(this.responseText);
-            } else {
-                ___CACHE.push(this.responseText);
             }
+            
             return true;
         }
     };
